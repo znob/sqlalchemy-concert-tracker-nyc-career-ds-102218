@@ -1,0 +1,11 @@
+tags:
+  - sqlalchemy
+  - associations
+  - migrations
+  - jupyter
+
+languages:
+  - sql
+  - python
+
+jupyter_notebook: true
