@@ -11,5 +11,11 @@ class User(Base):
         secondary='user_shows'
     )
 
-    # def total_shows(self):
-    #
+    def total_shows(self):
+        return len(self.shows)
+
+    def first_show(self):
+        self.shows.sort(key=lambda show: show.date)
+        first = self.shows[0]
+        format_first = f"{first.band.name} - {first.date.strftime('%m/%d/%Y')} - {first.venue.name}, {first.venue.city.name}"
+        return format_first

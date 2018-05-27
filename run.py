@@ -19,7 +19,8 @@ session = Session()
 # Users
 person1 = User(name="John Doe")
 person2 = User(name="Frank Stallone")
-session.add_all([person1, person2])
+person3 = User(name="Grace Kelly")
+session.add_all([person1, person2, person3])
 
 # Shows
 phirst_show = date(2003,11,28)
@@ -40,11 +41,13 @@ dead_1_7_79 = Show(date = dead_msg)
 # Bands
 phish = Band(name='Phish')
 dead = Band(name="Grateful Dead")
+my_hs_garage_band = Band(name="My Band From High School")
 
 phish.shows.extend([phish_12_31_95, phish_11_28_03])
 dead.shows.extend([dead_5_8_77, dead_venetta, dead_1_7_79])
 person1.shows.extend([dead_5_8_77, phish_12_31_95, phish_11_28_03])
 person2.shows.extend([dead_venetta, dead_5_8_77])
+person3.shows.append(dead_venetta)
 
 # Cities
 uniondale = City(name="Uniondale, NY")
@@ -86,7 +89,7 @@ cornell_scarlet.length = 675
 cornell_scarlet.notes = "famous Cornell Scarlet->Fire"
 
 session.add_all([phish_11_28_03, phish_12_31_95, dead_5_8_77, dead_venetta, dead_1_7_79])
-session.add_all([phish, dead])
+session.add_all([phish, dead, my_hs_garage_band])
 session.add_all([uniondale, veneta, nyc, ithaca])
 session.add_all([nassau_coliseum, springfield_creamery, msg, barton_hall])
 session.add_all([mikes, brown_eyed_women, scarlet_begonias, fire])
