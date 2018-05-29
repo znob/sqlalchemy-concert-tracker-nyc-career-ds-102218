@@ -90,6 +90,8 @@ Write an instance method that returns a User's total shows attended.  When we wr
 `first_show`
 
 Write an instance method that will return a User's first show in the following format:
-> `'Band Name - MM/DD/YYYY - Venue Name, City Name'`.
+> `'Band Name - MM/DD/YYYY - Venue Name, City Name'`
+
+You will need to [sort each concert by its date](https://stackoverflow.com/questions/5055812/sort-python-list-of-objects-by-date) and [convert the date object into a more readable format](https://stackoverflow.com/questions/10624937/convert-datetime-object-to-a-string-of-date-only-in-python).
 
 
