@@ -1,13 +1,13 @@
 
 # Concert Tracker
 
-We are going to build to help users keep track of all the concerts they have attended.  There will be many models, including both one-to-many and many-to-many relationships.  This will be challanging, but doable given all our practice in the previous sections.  Whenever necessary, refer back to the previous labs to review the syntax for creating one-to-many and many-to-many relationships.
+We are going to build to help users keep track of all the concerts they have attended.  There will be many models, including both one-to-many and many-to-many relationships.  This will be challenging, but doable given all our practice in the previous sections.  Whenever necessary, refer back to the previous labs to review the syntax for creating one-to-many and many-to-many relationships.
 
 ## Objectives
 
 1.  Review mapping objects to a database with the SQLAlchemy ORM
 2.  Become comfortable writing different object relationships using SQLAlchemy
-3.  Practice pulling data from a database using SQLAlechemy query objects
+3.  Practice pulling data from a database using SQLAlchemy query objects
 
 
 ## Instructions
@@ -27,7 +27,7 @@ Start by writing the classes for each of the eight models.  It probably makes mo
     - id
     - name
     - has many Shows
-    
+
 * **`Band`**
     - id
     - name
@@ -40,27 +40,27 @@ Start by writing the classes for each of the eight models.  It probably makes mo
     - belongs to a Venue
     - has many Songs
     - has many Users
-    
+
 * **`City`**
-    - id 
+    - id
     - name
     - has many Venues
-    
+
 * **`Venue`**
     - id
     - name
     - capacity
     - belongs to a City
     - has many Shows
-    
+
 * **`Song`**
     - id
     - name
     - has many Shows
-    
+
 * **`UserShow`**
     - sets up the many-to-many between User and Show
-    
+
 * **`ShowSong`**
     - id
     - length (in seconds)
@@ -93,5 +93,3 @@ Write an instance method that will return a User's first show in the following f
 > `'Band Name - MM/DD/YYYY - Venue Name, City Name'`
 
 You will need to [sort each concert by its date](https://stackoverflow.com/questions/5055812/sort-python-list-of-objects-by-date) and [convert the date object into a more readable format](https://stackoverflow.com/questions/10624937/convert-datetime-object-to-a-string-of-date-only-in-python).
-
-
