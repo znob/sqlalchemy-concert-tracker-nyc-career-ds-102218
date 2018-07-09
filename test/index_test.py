@@ -1,10 +1,10 @@
 import unittest, sys, datetime
-sys.path.insert(0, '../models/')
+sys.path.insert(0, './models/')
 from base import Base
 sys.path.insert(0, '..')
 from queries import *
 
-exec(open("../run.py").read())
+exec(open("./run.py").read())
 
 class TestConcertTracker(unittest.TestCase):
     users = session.query(User).all()
